@@ -13,7 +13,7 @@ class CellPhone:
     def set_retail_price(self, retail_price):
         self.__retail_price = retail_price
 
-    def get_manufuct(self):
+    def get_manufact(self):
         return self.__manufact
 
     def get_model(self):

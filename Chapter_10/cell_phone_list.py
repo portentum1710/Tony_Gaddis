@@ -1,7 +1,8 @@
 # Эта программа создает пять объектов CellPhone
 # и сохраняет их в списке.
-
+# page 558
 import cellphone
+
 
 def main():
     # Получить список объектов CellPhone.
