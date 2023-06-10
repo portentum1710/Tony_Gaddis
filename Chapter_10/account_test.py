@@ -11,8 +11,22 @@ def main():
     print("Вношу эту сумму на ваш счет")
     savings.deposit(pay)
 # Показать остаток
-    print(f'Ваш остаток на счете составляет: ${savings.get_balance():.2f}')
+    print(savings)
+# Получить сумму с банковского счета:
+    cash = float(input('Какую сумму желаете снять со счета?'))
+    print('Снимаю эту сумму с вашего счета')
+    savings.withdraw(cash)
+# Показать остаток
+    print(savings)
 
 
+def message():
+    my_account = bankaccount.Bankaccount(12234.0)
+    mess = str(my_account)
+    print(mess)
+
+
+# Вызвать главную функцию:
 if __name__ == '__main__':
-    main()
+    # main()
+    message()

@@ -20,3 +20,9 @@ class Bankaccount:
 # Метод get_balance возвращаем остаток средств на счете
     def get_balance(self):
         return self.__balance
+
+# Метод __str__ возвращает строковое
+# значение, сообщающее о состоянии объекта.
+    def __str__(self):
+        return f'Остаток составляет: ${self.__balance:,.2f}'
+
