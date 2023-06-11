@@ -28,3 +28,7 @@ class Contact:
         return f'Имя: {self.__name}\n' + \
                 f'Телефон: {self.__phone}\n' + \
                 f'Электронная почта: {self.__email}'
+
+
+if __name__ == '__main__':
+    pass

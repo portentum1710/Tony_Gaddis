@@ -108,3 +108,38 @@ def add(mycontacts):
         print('Запись добавлена.')
     else:
         print('Это имя уже существует.')
+
+# Функция change изменяет существующую
+# запись в указанном словаре.
+def change(mycontacts):
+    # Получить искомое имя.
+    name = input('Введите имя: ')
+
+    if name in mycontacts:
+        # Получить новый телефонный номер.
+        phone = input('Введите новый телефонный номер: ')
+
+        # Получить новый электронный адрес.
+        email = input('Введите новый электронный адрес: ')
+
+        # Создать именованную запись с объектом Contact.
+        entry = contact.Contact(name, phone, email)
+
+        # Обновить запись
+        mycontacts[name] = entry
+        print('Информация обновлена.')
+    else:
+        print("Это имя не найдено.")
+
+# Функция delete удаляет запись
+# из указанного словаря.
+def delete(mycontacts):
+    # Получить искомое имя.
+    name = input('Введите имя: ')
+
+    # Если имя найдено, то удалить запись.
+    if name in mycontacts:
+        del mycontacts[name]
+        print('Запись удалена.')
+    else:
+        print("Это имя не найдено.")
