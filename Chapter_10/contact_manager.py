@@ -7,7 +7,7 @@ LOOK_UP = 1  # НАЙТИ
 ADD = 2  # ДОБАВИТЬ
 CHANGE = 3  # ИЗМЕНИТЬ
 DELETE = 4  # УДАЛИТЬ
-QUIT = 5  # ВЫЙТ
+QUIT = 5  # ВЫЙТИ
 
 # Глобальная константа для имени файла.
 FILENAME = 'contacts.dat'
@@ -143,3 +143,17 @@ def delete(mycontacts):
         print('Запись удалена.')
     else:
         print("Это имя не найдено.")
+
+# Функция save_contacts консервирует указанный
+# объект и сохраняет его в файле контактов
+def save_contacts(mycontacs):
+    # Открыть файл для записи.
+    output_file = open(FILENAME, 'wb')
+    # Законсервировать словарь и сохранить его.
+    pickle.dump(mycontacs, output_file)
+
+    # Закрыть файл
+    output_file.close()
+
+if __name__ == '__main__':
+    main()

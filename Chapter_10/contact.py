@@ -31,4 +31,5 @@ class Contact:
 
 
 if __name__ == '__main__':
-    pass
+    mycont = Contact("fedor", "349039", "email")
+

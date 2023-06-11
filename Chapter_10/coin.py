@@ -1,5 +1,6 @@
 import random
 
+
 # Определение класса:
 class Coin:
 
@@ -14,6 +15,7 @@ class Coin:
 
     def get_sideup(self):
         return self.__sideup
+
 
 
 
