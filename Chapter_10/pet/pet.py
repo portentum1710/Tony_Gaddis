@@ -23,5 +23,12 @@ class Pet:
         return self.__age
 
     def __str__(self):
-        return f'Данные вашего питомца: {self.__name}, {self.__animal_type}, {self.__age}'
+        return f"""Данные вашего питомца: {self.__name}
+                       {self.__animal_type}
+                       {self.__age}"""
 
+if __name__ == '__main__':
+    animal = Pet("fenya", "cat", 2)
+    animal.set_animal_type('dog')
+
+    print(animal.get_animal_type())
