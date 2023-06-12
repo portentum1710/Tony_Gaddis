@@ -28,3 +28,11 @@ class Employee:
 
     def get_emp_position(self):
         return self.__emp_position
+
+    def __str__(self):
+        return f""""
+        Имя сотрудника: {self.__name}
+        Идентификационный номер сотрудника: {self.__emp_id}
+        Отдел для сотрудника: {self.__division}
+        Должность сотрудника: {self.__emp_position}  
+        """

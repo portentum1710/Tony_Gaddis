@@ -14,6 +14,7 @@ def main():
         emp_id = input("Введите Идентификационный номер сотрудника: ")
         division = input("Введите Отдел для сотрудника: ")
         emp_position = input("Введите должность сотрудника: ")
+        print()
 
         new_employee = employee_class.Employee(name, emp_id, division, emp_position)
         pickle.dump(new_employee, output_file)

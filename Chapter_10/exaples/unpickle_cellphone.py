@@ -1,4 +1,4 @@
-# page 560
+
 # Эта программа расконсервирует объекты CellPhone
 import pickle
 import cellphone
@@ -32,7 +32,7 @@ def main():
 
 def display_data(phone):
     print(f'Производитель: {phone.get_manufact}')
-    print(f'Номер модели: {phone.get_model()}')
+    print(f'Номер модели: {phone.get_model}')
     print(f'Розничная цена: {phone.get_retail_price():,.2f}')
 
 
