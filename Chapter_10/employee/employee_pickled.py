@@ -24,5 +24,6 @@ def main():
     output_file.close()
     print(f"Данные записаны в {FILENAME}")
 
+
 if __name__ == '__main__':
     main()
