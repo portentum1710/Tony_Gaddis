@@ -1,34 +1,37 @@
 import class_patient_procedure
 import pickle
 
-FILENAME = "procedure.dot"
+FILE_PATIENT = "patient.dot"
+FILE_PROCEDURE = "procedure.dot"
 
 
 def main():
-    input_file = open(FILENAME, 'rb')
-    end_of_file = False
+    input_file_patient = open(FILE_PATIENT, 'rb')
+    input_file_procedure = open(FILE_PROCEDURE, 'rb')
 
+    end_of_file = False
+    # Расконсервируем файл поциента
     while not end_of_file:
         try:
-            pat_data = pickle.load(input_file)
-            desplay_data(pat_data)
+            data = pickle.load(input_file_patient)
+            desplay_data(data)
         except EOFError:
             end_of_file = True
+    input_file_patient.close()
 
-    input_file.close()
+    end_of_file = False
+    # Расконсервируем файл с процедурами:
+    while not end_of_file:
+        try:
+            data = pickle.load(input_file_procedure)
+            desplay_data(data)
+        except EOFError:
+            end_of_file = True
+    input_file_procedure.close()
 
 
-def desplay_data(pat_data):
-    print(type(pat_data))
-    print(f'ФИО: {pat_data.get_full_name()}')
-    print(f'Адрес, город, область и почтовый индекс: {pat_data.get_full_address()}')
-    print(f'Телефонный номер: {pat_data.get_phone()}')
-    print(f'Имя и телефон контактного лица для экстренной связи: {pat_data.get_contact_phone()}')
-    print('----------------------------------------------------')
-    # print(f'Название процедуры: {pat_data.}')
-    # print(f'Дата процедуры: {class_patient_procedure.Procedure.get_procedure_date(self=)}')
-    # print(f'Имя врача, который выполнял процедуру: {class_patient_procedure.Procedure.get_doctor_name(self=)}')
-    # print(f'Стоимость процедуры: {class_patient_procedure.Procedure.get_cost_procedure(self=)}')
+def desplay_data(data):
+    print(data)
 
 
 if __name__ == '__main__':

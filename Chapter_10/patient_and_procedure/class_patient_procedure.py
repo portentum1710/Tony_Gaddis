@@ -30,7 +30,8 @@ class Patient:
         return self.__contac_phone
 
     def __str__(self):
-        return f"""ФИО:                                                 {self.__full_name}
+        return f"""
+                   ФИО:                                                 {self.__full_name}
                    Адрес, город, область и почтовый индекс:             {self.__full_address}
                    Телефонный номер:                                    {self.__phone}
                    Имя и телефон контактного лица для экстренной связи: {self.__contac_phone}
@@ -69,7 +70,8 @@ class Procedure:
         return self.__cost_procedure
 
     def __str__(self):
-        return f""""  Название процедуры:                    {self.__name_of_procedure}
+        return f"""  
+                      Название процедуры:                    {self.__name_of_procedure}
                       Дата процедуры:                        {self.__procedure_date}  
                       Имя врача, который выполнял процедуру: {self.__doctor_name}
                       Cтоимость процедуры:                   {self.__cost_procedure}
