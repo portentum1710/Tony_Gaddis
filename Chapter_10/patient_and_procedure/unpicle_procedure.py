@@ -1,24 +1,24 @@
-# Эта программа расконсервирует объекты Patient:
+# Эта программа расконсервирует объекты Procedure:
 import class_patient_procedure
 import pickle
 
-# Константа для имени файла
-FILE_PATIENT = "patient.dot"
+# Константа для имени файла:
+FILE_PROCEDURE = "procedure.dot"
+
 
 
 def main():
-    # Открыть файлы:
-    input_file_patient = open(FILE_PATIENT, 'rb')
+    # Открыть файл:
+    input_file_procedure = open(FILE_PROCEDURE, 'rb')
 
     # Передаем открытый файл в фунцию
-    # для чтения и получаем из нее данные:
-    read_file(input_file_patient)
+    # для чтения и получаем из нее данные
+    read_file(input_file_procedure)
 
 
 def read_file(file):
     # переменная для обозначения конца файла:
     end_of_file = False
-
     while not end_of_file:
         try:
             # Расконсервировать следующий объект
@@ -32,16 +32,16 @@ def read_file(file):
             end_of_file = True
         # Закрыть файл.
     file.close()
-    # Возвращаем полученные данные в главную функцию
-    # return data
 
 
 # Функция display_data показывает данные
 # из объекта переданного в качестве аргумента.
 def desplay_data(data):
-    print(f'ФИО : {data.get_full_name()}')
-    print(f'Адрес, город, область и почтовый индекс: {data.get_phone()}')
-    print(f'Имя и телефон контактного лица для экстренной связи: {data.get_contact_phone()}')
+    print(f'Название процедуры: {data.get_name_procedure()}')
+    print(f'Дата процедуры: {data.get_procedure_date()}')
+    print(f'Имя врача, который выполнял процедуру: {data.get_doctor_name()}')
+    print(f'Cтоимость процедуры: {data.get_cost_procedure():,.2f}')
+    print("----------------------------------------")
 
 
 if __name__ == '__main__':
