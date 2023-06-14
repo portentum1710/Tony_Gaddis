@@ -29,6 +29,7 @@ class Patient:
     def get_contact_phone(self):
         return self.__contac_phone
 
+    #  метод __str__() возвращает состояние объекта в виде строкового значения.
     def __str__(self):
         return f"""
                    ФИО:                                                 {self.__full_name}
@@ -69,6 +70,7 @@ class Procedure:
     def get_cost_procedure(self):
         return self.__cost_procedure
 
+    #  метод __str__() возвращает состояние объекта в виде строкового значения.
     def __str__(self):
         return f"""  
                       Название процедуры:                    {self.__name_of_procedure}
